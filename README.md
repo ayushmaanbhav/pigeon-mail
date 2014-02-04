@@ -1,4 +1,4 @@
-pigeon
-======
+# PIGEON
 
-basic text mail delivering library in python
+## Introduction
+Basic text mail delivering library in python
