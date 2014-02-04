@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Pigeon : Basic text network mail delivering library in python" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Pigeon</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/saswatraj/pigeon">View on GitHub</a>
+
+          <h1 id="project_title">Pigeon</h1>
+          <h2 id="project_tagline">Basic text network mail delivering library in python</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/saswatraj/pigeon/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/saswatraj/pigeon/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="pigeon-" class="anchor" href="#pigeon-"><span class="octicon octicon-link"></span></a>PIGEON <img src="http://www.ju2framboise.com/wp-content/uploads/2013/10/pigeon-voyageur.png" alt="" title="Pigeon">
+</h1>
+
+<h2>
+<a name="introduction" class="anchor" href="#introduction"><span class="octicon octicon-link"></span></a>Introduction</h2>
+
+<p>Basic text mail delivering library in python.Contains all commands to connect to network mailserver and send mail through it.Only text mails are supported.Telnet commands are built as functions.It has a gui component for basic demonstration.</p>
+
+<h2>
+<a name="requirements" class="anchor" href="#requirements"><span class="octicon octicon-link"></span></a>Requirements</h2>
+
+<ul>
+<li>Python-dev package</li>
+<li>Python-tk ( GUI component )</li>
+<li>Tcl and Tk 5.6</li>
+<li>Python-distutils-extra ( installation and build )</li>
+</ul><h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p><strong>Make sure the requirements are satisfied before installing</strong></p>
+
+<ul>
+<li>Goto the libs folder and run <code>python setup.py install</code>
+</li>
+<li>Goto the gui folder and for running the gui type <code>python mlc.py</code>
+</li>
+</ul><h2>
+<a name="demo" class="anchor" href="#demo"><span class="octicon octicon-link"></span></a>Demo</h2>
+
+<h3>
+<a name="code-for-sending-a-small-mail" class="anchor" href="#code-for-sending-a-small-mail"><span class="octicon octicon-link"></span></a>Code for sending a small mail</h3>
+
+<div class="highlight highlight-python"><pre><span class="kn">import</span> <span class="nn">pigeon</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">pigeon</span><span class="o">.</span><span class="n">pigeon</span><span class="p">(</span><span class="s">"&lt;network mailserver address&gt;"</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">t</span> <span class="c">#check t for return codes and handling errors</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">pigeon</span><span class="o">.</span><span class="n">sayHello</span><span class="p">(</span><span class="s">"&lt;domain&gt;"</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">t</span> <span class="c">#check t for return codes and handling errors</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">pigeon</span><span class="o">.</span><span class="n">msgFrom</span><span class="p">(</span><span class="s">"&lt;senders mail address&gt;"</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">t</span> <span class="c">#check t for return codes and handling errors</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">pigeon</span><span class="o">.</span><span class="n">rcptTo</span><span class="p">(</span><span class="s">"&lt;recipient mail address&gt;"</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">t</span> <span class="c">#check t for return codes and handling errors</span>
+<span class="n">pigeon</span><span class="o">.</span><span class="n">beginData</span><span class="p">()</span> <span class="c">#start sending data</span>
+<span class="n">pigeon</span><span class="o">.</span><span class="n">writeData</span><span class="p">(</span><span class="s">"&lt;data&gt;"</span><span class="p">)</span> 
+<span class="n">t</span> <span class="o">=</span> <span class="n">pigeon</span><span class="o">.</span><span class="n">sendMsg</span><span class="p">()</span>
+<span class="k">print</span> <span class="n">t</span> <span class="c">#check t for return codes and handling errors</span>
+</pre></div>
+
+<p>You can also try the gui which shows the same msg recieved from network when the following communications are being made.</p>
+
+<h2>
+<a name="bugssuggestions" class="anchor" href="#bugssuggestions"><span class="octicon octicon-link"></span></a>Bugs/Suggestions</h2>
+
+<p>Would love to hear about any suggestions or improve any bugs cuz this was just a small tutorial to build a python library.Drop in a mail at <a href="mailto:saswatrj2010@gmail.com">saswatrj2010@gmail.com</a></p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Pigeon maintained by <a href="https://github.com/saswatraj">saswatraj</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
