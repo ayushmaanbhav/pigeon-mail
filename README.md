@@ -12,7 +12,7 @@ Basic text mail delivering library in python.Contains all commands to connect to
 ## Installation 
 __Make sure the requirements are satisfied before installing__
 * Goto the libs folder and run `python setup.py install`
-* Goto the gui folder and for running the gui type `python mlc.py`
+* For running the gui, goto the gui folder and  type `python mlc.py`
 
 ## Demo 
 
